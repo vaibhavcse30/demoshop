@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Shop">
+
+	<select id="getShopList" resultType="Shop">
+		SELECT name,staffName FROM
+		users
+	</select>
+
+	<insert id="insertData" parameterType="Shop" useGeneratedKeys="true">
+		INSERT INTO Shop (name,staffName) VALUES
+		(#{name},#{staffName})
+	</insert>
+</mapper>

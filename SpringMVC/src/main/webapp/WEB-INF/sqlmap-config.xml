@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- changes from the defaults -->
+		<setting name="lazyLoadingEnabled" value="false" />
+	</settings>
+	<typeAliases>
+		<typeAlias type="com.shop.common.model.Shop" alias="Shop" />
+		<typeAlias type="com.shop.common.model.User" alias="User" />
+		<typeAlias type="com.shop.common.model.Announcment" alias="Announcment" />
+		<typeAlias type="com.shop.common.model.Orders" alias="order" />
+		<typeAlias type="com.shop.common.model.Address" alias="address" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="service/ShopService.xml" />
+		<mapper resource="service/UserService.xml" />
+		<mapper resource="service/AnnouncmentService.xml" />
+		<mapper resource="service/OrdersService.xml" />
+	</mappers>
+</configuration>

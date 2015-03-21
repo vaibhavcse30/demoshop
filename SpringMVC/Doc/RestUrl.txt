@@ -1,0 +1,100 @@
+1)
+http://localhost:8080/shopstep/rest/data/addUser
+	Content-Type:application/json
+		Sample Request:
+			{
+			    "firstName": "vaibhav",
+			    "lastName": "Srivastava",
+			    "gender": "male",
+			    "city": "noida"
+			}
+		Sample Response : success
+
+2)
+http://localhost:8080/shopstep/rest/data/getUser
+
+	Sample Response :
+		[
+		    {
+		        "userId": 1,
+		        "firstName": vaibhav,
+		        "lastName": srivastava,
+		        "gender": "male",
+		        "city": "noida"
+		    },
+		    {
+		        "userId": 2,
+		        "firstName": manu,
+		        "lastName": pandit,
+		        "gender": "male",
+		        "city": "delhi"
+		    }
+		]
+3)
+http://localhost:8080/shopstep/rest/data/addAnnouncment
+		Sample Request:
+		## add public message
+		{
+		    "message_type": "public",
+		    "category": "shop",
+		    "message": "get 10% off",
+		    "scheduled_timestamp": "2010-03-08 14:59:30.252"
+		}
+
+		## add private message
+		{
+		    "message_type": "private",
+		    "category": "shop",
+		    "message": "get 10% off",
+		    "scheduled_timestamp": "2010-03-08 14:59:30.252",
+		    "directed_to" :"1"
+		}
+		
+		Sample Response : success
+
+4)
+http://localhost:8080/shopstep/rest/data/getAnnouncment
+	Sample Response :
+			[
+		    {
+		        "message_type": "public",
+		        "directed_to": "all",
+		        "category": "shop",
+		        "message": "get 10% off",
+		        "scheduled_timestamp": "2015-03-21 14:59:30.0"
+		    },
+		    {
+		        "message_type": "private",
+		        "directed_to": "1",
+		        "category": "shop",
+		        "message": "get 10% off",
+		        "scheduled_timestamp": "2015-03-08 14:59:30.0"
+		    },
+		    {
+		        "message_type": "private",
+		        "directed_to": "1",
+		        "category": "shop",
+		        "message": "get 10% off",
+		        "scheduled_timestamp": "2010-03-08 14:59:30.0"
+		    }
+		]
+
+5)
+http://localhost:8080/shopstep/rest/data/getAnnouncmentById?uid=1
+	Sample Response :
+				[
+		    {
+		        "message_type": "private",
+		        "directed_to": "1",
+		        "category": "shop",
+		        "message": "get 10% off",
+		        "scheduled_timestamp": "2010-03-08 14:59:30.0"
+		    },
+		    {
+		        "message_type": "private",
+		        "directed_to": "1",
+		        "category": "shop",
+		        "message": "get 10% off",
+		        "scheduled_timestamp": "2010-03-08 14:59:30.0"
+		    }
+		]
