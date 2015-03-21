@@ -23,7 +23,7 @@ DROP TABLE `userdb`.`book`;
 DROP TABLE `userdb`.`user`;
 
 CREATE TABLE `userdb`.`Announcment` (
-	`ID` INT NOT NULL,
+	`ID` INT NOT NULL AUTOINCREMENT,
 	`message_type` VARCHAR(255),
 	`directed_to` VARCHAR(255),
 	`category` VARCHAR(255),
@@ -33,7 +33,7 @@ CREATE TABLE `userdb`.`Announcment` (
 ) ENGINE=InnoDB;
 
 CREATE TABLE `userdb`.`users` (
-	`user_id` INT NOT NULL,
+	`user_id` INT NOT NULL AUTOINCREMENT,
 	`first_name` VARCHAR(100),
 	`last_name` VARCHAR(100),
 	`gender` VARCHAR(30),
@@ -47,7 +47,7 @@ CREATE TABLE `userdb`.`Shop` (
 ) ENGINE=InnoDB;
 
 CREATE TABLE `userdb`.`schooldress` (
-	`id` VARCHAR(37) NOT NULL,
+	`id` VARCHAR(37) NOT NULL AUTOINCREMENT,
 	`title` VARCHAR(128) NOT NULL,
 	`description` VARCHAR(256) NOT NULL,
 	`schoolname` VARCHAR(64) NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE `userdb`.`book` (
 ) ENGINE=InnoDB;
 
 CREATE TABLE `userdb`.`user` (
-	`UserId` INT NOT NULL,
+	`UserId` INT NOT NULL AUTOINCREMENT,
 	`first_name` VARCHAR(100),
 	`last_name` VARCHAR(100),
 	`gender` VARCHAR(30),
